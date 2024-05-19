@@ -20,7 +20,31 @@ namespace PI_Laba_6_Pattern
             else
             {
                 WorkYears = WY;
+                this.AutoAssignBonus();
             }
+        }
+        public void AutoAssignBonus()
+        {
+            switch (WorkYears)
+            {
+                case 1:
+                    this.SetBonus(10);
+                    break;
+                case 2:
+                    this.SetBonus(20);
+                    break;
+                case 3:
+                    this.SetBonus(50);
+                    break;
+
+                default: 
+                    break;
+            }
+        }
+
+        public void SetBonus(ushort bonus)
+        {
+            Bonus = bonus;
         }
     }
 }

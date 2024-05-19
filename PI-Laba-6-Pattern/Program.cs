@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var e = new Employee(1);
+            Console.WriteLine(e.Bonus);
         }
     }
 }
