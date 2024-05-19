@@ -37,7 +37,8 @@ namespace PI_Laba_6_Pattern
                     this.SetBonus(50);
                     break;
 
-                default: 
+                default:
+                    this.SetBonus(0);
                     break;
             }
         }
