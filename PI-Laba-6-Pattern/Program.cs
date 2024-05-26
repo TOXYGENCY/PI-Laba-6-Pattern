@@ -4,8 +4,10 @@
     {
         static void Main(string[] args)
         {
-            var e = new Employee(1);
-            Console.WriteLine(e.Bonus);
+            var e = new Employee(2);
+            Console.WriteLine(e.Bonus); // 20
+            e.SetBonus(50);
+            Console.WriteLine(e.Bonus); // 50
         }
     }
 }

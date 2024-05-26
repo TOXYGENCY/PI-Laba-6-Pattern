@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PI_Laba_6_Pattern
 {
-    public class Employee
+    // Этот класс отвечает за отдельного сотрудника
+    public class Employee : Tree_Leaf
     {
-        // все скрыть и сделать методы доступа
         public sbyte WorkYears { get; set; }
         public ushort Bonus { get; protected set; }
         public Employee(sbyte WY) 
@@ -23,7 +23,13 @@ namespace PI_Laba_6_Pattern
                 this.AutoAssignBonus();
             }
         }
-        public void AutoAssignBonus()
+
+        public void SetBonus(ushort bonus)
+        {
+            Bonus = bonus;
+        }
+
+        protected void AutoAssignBonus()
         {
             switch (WorkYears)
             {
@@ -43,9 +49,5 @@ namespace PI_Laba_6_Pattern
             }
         }
 
-        public void SetBonus(ushort bonus)
-        {
-            Bonus = bonus;
-        }
     }
 }
