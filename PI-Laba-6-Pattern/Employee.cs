@@ -15,7 +15,7 @@ namespace PI_Laba_6_Pattern
         { 
             if (WY < 0) 
             { 
-                Console.WriteLine("Стаж должен быть не меньше 0.");
+                throw new ArgumentException("Стаж должен быть не меньше 0.");
             }
             else
             {
@@ -39,7 +39,7 @@ namespace PI_Laba_6_Pattern
                 case 2:
                     this.SetBonus(20);
                     break;
-                case 3:
+                case > 2:
                     this.SetBonus(50);
                     break;
 
